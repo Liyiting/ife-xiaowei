@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>任务三：三栏式布局</title>
+    <style>
+        body {
+            padding: 20px;
+            margin: auto 0;
+        }
+        #container {
+            height: auto;
+            width: 92%;
+            padding: 20px;
+            margin: auto 0;
+            background-color: #eee;
+            border: 1px solid #999;
+            position: absolute;
+        }
+        #name-card {
+            height: auto;
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #999;
+            float: left;
+            position: relative;
+        }
+        .logo {
+            height: 80px;
+            width: 80px;
+            background-color: #eee;
+            border: 1px solid #999;
+            display: table-cell;
+            vertical-align: middle;
+
+        }
+        .logo img {
+            width: 80px;
+            vertical-align: middle;
+        }
+        .name {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        #team-intro {
+            margin: 0 20px;
+            position: relative;
+            background-color: #fff;
+            border: 1px solid #999;
+            position: absolute;
+            left: 260px;
+            right: 140px;
+
+        }
+        #team-member {
+            height: auto;
+            width: 120px;
+            background-color: #fff;
+            border: 1px solid #999;
+            float: right;
+        }
+        .personal-logo {
+            height: 80px;
+            width: 80px;
+            margin: 20px;
+            background-color: #eee;
+            border: 1px solid #999;
+
+        }
+        .personal-logo img{
+            width: 80px;
+        }
+        .personal-logo p {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+        .personal-logo p img {
+            margin-top: -36px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="name-card">
+        <div class="logo"><img src="http://wx3.sinaimg.cn/mw690/698e832dly1fdgiafv7hmj20gm0d7tbx.jpg"></div>
+        <div class="name">铲屎小分队</div>
+    </div>
+    <div id="team-intro">这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。这里是一段很长很长很长很长的话。</div>
+    <div id="team-member">
+        <div class="personal-logo">
+            <p><img src="http://wx3.sinaimg.cn/mw690/698e832dly1fdgiafv7hmj20gm0d7tbx.jpg"></p>
+        </div>
+        <div class="personal-logo">
+            <p><img src="http://wx3.sinaimg.cn/mw690/698e832dly1fdgiafv7hmj20gm0d7tbx.jpg"></p>
+        </div>
+        <div class="personal-logo">
+            <p><img src="http://wx3.sinaimg.cn/mw690/698e832dly1fdgiafv7hmj20gm0d7tbx.jpg"></p>
+        </div>
+        <div class="personal-logo">
+            <p><img src="http://wx3.sinaimg.cn/mw690/698e832dly1fdgiafv7hmj20gm0d7tbx.jpg"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
