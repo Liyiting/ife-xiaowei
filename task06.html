@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>任务六：通过HTML及CSS模拟报纸排版</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            font-family: "Microsoft YaHei";
+        }
+        body {
+            width: 980px;
+            position: relative;
+        }
+        .container {
+            height: 1386px;
+            width: 100%;
+            padding: 0 247px 0 247px;
+            position: absolute;
+            left: 0;
+        }
+
+        /*header部分CSS*/
+        .header {
+            height: 61px;
+            border-bottom: 2px solid #938e8c;
+            position: relative;
+            margin: 0 auto;
+        }
+        .logo {
+            height: 61px;
+            width: 110px;
+            background-color: rgb(211,94,95);
+            padding-bottom: 0;
+            vertical-align: baseline;
+            position: relative;
+        }
+        .logo p {
+            font-family: "SimHei";
+            font-size: 12px;
+            color:#ffffff;
+            position: absolute;
+            bottom: 0;
+            margin-left: 6px;
+        }
+        .date {
+            height: 61px;
+            position: absolute;
+            right: 0;
+            top:0;
+        }
+        .date p {
+            font-family: "SimHei";
+            font-size: 12px;
+            color:#d45d5c;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        /*header部分CSS 完*/
+
+        /*part1部分CSS*/
+        /*part1左侧*/
+        .part1 {
+            width: 892px;
+            padding: 40px 0 40px 0;
+            float: left;
+            margin: auto 0;
+
+        }
+        .part1-content {;
+            float: left;
+        }
+        .image1 {
+            width: 641px;
+            height: 301px;
+            background: url(http://wx1.sinaimg.cn/large/698e832dly1fdvhh83zgwj20ht08dahw.jpg) no-repeat center;
+            position: relative;
+            margin-bottom: 46px;
+        }
+        .cover-green {
+            height: 301px;
+            width: 191px;
+            background-color: rgba(66,140,89,0.5);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .cover-red {
+            height: 301px;
+            width: 191px;
+            background-color: rgba(204,118,128,0.5);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .part1-article {
+            font-size: 12px;
+        }
+        .para-1 {
+            width: 234px;
+            font-family: "SimSun";
+            margin-right: 16px;
+            float: left;
+        }
+        .para-1 p {
+            font-family: "Microsoft YaHei";
+            font-size: 16px;
+            font-weight: bold;
+            color:#418c59;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        .para-2 {
+            width: 210px;
+            margin-right: 16px;
+            color:rgba(35,24,21,0.7);
+            float: left;
+        }
+        .para-2 p {
+            font-family: "Microsoft YaHei";
+            font-size: 16px;
+            font-weight: bold;
+            color:#d2994f;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        .para-3 {
+            width: 140px;
+            height: 88px;
+            font-family: "Microsoft YaHei";
+            color:rgba(35,24,21,0.7);
+            margin-bottom: 16px;
+            float: left;
+        }
+        .para-3 p {
+            font-family: "Microsoft YaHei";
+            font-size: 16px;
+            font-weight: bold;
+            color:#cc7680;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        .para-4 {
+            color:rgba(35,24,21,0.7);
+
+        }
+        .para-4 span {
+            color:rgba(205,74,72,0.7);
+            font-style: italic;
+        }
+        /*part1左侧完*/
+
+        /*part1右侧*/
+        .part1-title {
+            width: 203px;
+            margin-right:8px;
+            border-top: 2px solid #cc8091;
+            float: right;
+        }
+        .main-title {
+            font-size: 20px;
+            color: #000000;
+            border-bottom: 2px solid #000;
+            line-height: 24px;
+        }
+        .main-title:first-letter {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .main-title:nth-child(1){
+            width: 72px;
+            margin-top: 19px;
+        }
+        .main-title:nth-child(2){
+            width: 124px;
+            margin-top: 13px;
+        }
+        .side-title {
+            font-family: "KaiTi";
+            font-size: 8px;
+            color:#676767;
+            line-height: 9px;
+            margin-top: 10px;
+            margin-bottom: 54px;
+        }
+        .num-1 {
+            font-size: 116px;
+            color: #75b86b;
+            font-style: italic;
+            line-height: 116px;
+            margin-left: -14px;
+            margin-bottom: 31px;
+        }
+        .num-2 {
+            font-size: 55px;
+            color: #cc8091;
+            float: left;
+            line-height: 55px;
+            margin-right: 15px;
+        }
+        .num-3 {
+            height: 55px;
+            float: left;
+            position: relative;
+        }
+        .css {
+            font-size: 21px;
+            color: #cc8091;
+            display: block;
+            position: absolute;
+        }
+        .little-css {
+            color: #ccc;
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+        /*part1右侧 完*/
+        /*part1部分CSS 完*/
+
+
+        /*part2部分CSS*/
+        /*part2左侧*/
+        .part2 {
+            width: 892px;
+            float: left;
+            margin-bottom: 38px;
+        }
+        .part2-left {
+            width: 415px;
+            float: left;
+        }
+        .part2-title {
+            font-family: "SimHei";
+            font-style: bold;
+            color:#11456b;
+            border-bottom: 2px solid #11456b;
+            padding-bottom: 10px;
+        }
+        .part2-title-firstword {
+            font-size: 64px;
+            color: #f5e327;
+            font-style: italic;
+        }
+        .title-eng {
+            font-size: 36px;
+        }
+        .title-chn {
+            font-size: 28px;
+        }
+        .part2-article {
+            padding-top: 14px;
+            font-family: "SimSun";
+            font-size: 12px;
+        }
+        .part2-article p:nth-child(4){
+            text-indent: 2em;
+        }
+        .part2-article p:nth-child(5){
+            text-indent: 2em;
+        }
+        .part2-article-firstword {
+            font-size: 70px;
+            color: #f5e327;
+            float: left;
+            margin-right: 5px;
+        }
+        .image2 {
+            width: 174px;
+            height: 294px;
+            background: url(http://wx3.sinaimg.cn/large/698e832dly1fdvhh2vikmj204n080wgu.jpg) no-repeat center;
+            float: right;
+            margin: 13px 0 10px 15px;
+        }
+        /*part2左侧 完*/
+
+        /*part2右侧*/
+        .image3 {
+            margin:0;
+            padding: 0;
+            height: 275px;
+            width: 458px;
+            float: right;
+            background: url(http://wx2.sinaimg.cn/large/698e832dly1fdvhh1vlu2j20cq075wid.jpg) no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            margin-bottom: 34px;
+        }
+        .cover-black {
+            height: 61px;
+            width: 458px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.1);
+        }
+        .image3 p {
+            padding-left: 12px;
+            border-left: 3px solid #72b16a;
+            line-height: 44px;
+            position: absolute;
+            left: 38px;
+            top: 10px;
+            font-size: 24px;
+            color: #fff;
+        }
+        .image3 span {
+            font-size: 12px;
+            font-style: italic;
+            color: #72b16a;
+            margin-left: 10px;
+        }
+        .quote {
+            width: 459px;
+            height: 318px;
+            background-color: rgb(237,238,214);
+            float: right;
+            position: relative;
+        }
+        .category {
+            font-family: "SimSun";
+            font-size: 16px;
+            line-height: 40px;
+            margin-left: 40px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .category em {
+            width: 0;
+            height: 0;
+            margin-top: 16px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 8px solid rgb(16,69,107);
+            position: absolute;
+            left: -16px;
+        }
+        .category p {
+            text-align: left;
+        }
+        .category span {
+            text-align: right;
+            font-style: italic;
+            font-size: 12px;
+        }
+        .red-block {
+            height: 160px;
+            width: 260px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: rgb(211,94,95);
+        }
+        .red-block-left {
+            font-size: 110px;
+            color:#ffffff;
+            margin-left: 10px;
+            margin-top: 8px;
+            float: left;
+        }
+        .red-block-left:after {
+            content: "";
+            width: 2px;
+            height: 86px;
+            background-color:#ffffff;
+            position: absolute;
+            top:38px;
+            left: 30%;
+        }
+        .red-block-right p.one{
+            font-family: "SimHei";
+            color: #ffffff;
+            font-size: 21px;
+            font-style: italic;
+            float: right;
+            position: relative;
+            top: 34px;
+            right: 14px;
+        }
+        .red-block-right p.hello {
+            font-family: "SimHei";
+            color: #ffffff;
+            font-size: 12px;
+            float: right;
+            position: relative;
+            top: 34px;
+            right: 24px;
+        }
+        .helloworld {
+            width: 174px;
+            height: 122px;
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            font-family: "SimHei";
+            font-style: italic;
+            color: #5a5b5b;
+        }
+        .helloworld span{
+            font-size: 72px;
+            color: #d45d5c;
+            display: block;
+            position: absolute;
+        }
+        .helloworld span:nth-child(1){
+            top: -20px;
+            left: -48px;
+        }
+        .helloworld span:nth-child(2){
+            bottom: -64px;
+            right: 6px;
+        }
+        /*part2完*/
+        .footer {
+            width: 892px;
+            border-top: 1px solid #938e8c;
+            position: absolute;
+            bottom: 44px;
+        }
+        .footer p {
+            font-family: "SimHei";
+            font-size: 12px;
+            color:#d45d5c;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo"><p>ife.baidu.com</p></div>
+        <div class="date"><p>2016.03</p></div>
+    </div>
+    <div class="part1">
+        <div class="part1-content">
+            <div class="image1"><div class="cover-green"></div><div class="cover-red"></div></div>
+            <div class="part1-article">
+                <div class="para-1">
+                    <p>What</p>
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                </div>
+                <div class="para-2">
+                    <p>When</p>
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                </div>
+                <div class="para-3">
+                    <p>How</p>
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                </div>
+                <div class="para-4">
+                    <p>What--------<span class="percentage">40%</span></p>
+                    <p>What--------<span class="percentage">30%</span></p>
+                    <p>What--------<span class="percentage">30%</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="part1-title">
+            <p class="main-title">ABOUT</p>
+            <p class="main-title">TECHNOLOGE</p>
+            <p class="side-title">About technologe About technologe About technologe</p>
+            <div class="num-1">700</div>
+            <div class="num-2">3.2</div>
+            <div class="num-3">
+                <p class="css">CSS</p>
+                <p class="little-css">csscsscsscss</p>
+            </div>
+        </div>
+    </div>
+    <div class="part2">
+        <div class="part2-left">
+            <div class="part2-title">
+                <p class="title-eng"><span class="part2-title-firstword">THE</span> TECHNOLOGE OF FRONT</p>
+                <p class="title-chn">前端技术领域</p>
+            </div>
+            <div class="part2-article">
+                <p><span class="part2-article-firstword">前</span>端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+                <div class="image2"></div>
+                <p>
+                端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。
+                </p>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。
+                </p>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端。
+                </p>
+            </div>
+        </div>
+        <div class="image3">
+            <div class="cover-black"><p>前端技术<span>前端技术前端技术</span></p></div>
+        </div>
+        <div class="quote">
+            <div class="category">
+                <p><em></em>前端前端前端前端前端前端前端.....................................<span>前端</span></p>
+                <p><em></em>前端前端前端前端前端..................................................<span>前端前</span></p>
+                <p><em></em>前端前端前端前端前端前端前端前端............................<span>前端</span></p>
+            </div>
+            <div class="red-block">
+                <div class="red-block-left">0</div>
+                <div class="red-block-right">
+                    <p class="one">ONE TWO <br/>THREE FOUR FIVE</p>
+                    <p class="hello">hello world hello world <br/>hello world</p>
+                </div>
+            </div>
+            <div class="helloworld"><span>“</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hello world hello world hello world hello world hello world hello world hello world hello world hello world<span>”</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><p>ife.baidu.com</p></div>
+</div>
+</body>
+</html>
